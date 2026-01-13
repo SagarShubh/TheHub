@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-app);
+}
+
+.lockCard {
+    padding: var(--space-8);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.input {
+    width: 100%;
+    padding: var(--space-4);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    text-align: center;
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+.input:focus {
+    border-color: var(--accent-content);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.button {
+    width: 100%;
+    padding: var(--space-4);
+    border-radius: 12px;
+    border: none;
+    background: var(--text-primary);
+    color: var(--bg-app);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.error {
+    color: var(--accent-error);
+    font-size: 0.85rem;
+    margin-top: -8px;
+}

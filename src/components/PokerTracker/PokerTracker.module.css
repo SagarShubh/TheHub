@@ -1,0 +1,244 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: var(--space-4);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 1rem;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+}
+
+.bankrollBadge {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--accent-poker);
+    font-variant-numeric: tabular-nums;
+}
+
+.bankrollBadge.positive {
+    color: var(--accent-success);
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.bankrollBadge.negative {
+    color: var(--accent-error);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+
+.upcomingSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sectionTitle {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.addBtn {
+    background: transparent;
+    border: 1px solid var(--accent-poker);
+    color: var(--accent-poker);
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.addBtn:hover {
+    background: var(--accent-poker);
+    color: white;
+}
+
+.matchList {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 4px;
+    /* Space for scrollbar */
+}
+
+.matchRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.matchInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.platform {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+.buyIn {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.finishBtn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.finishBtn:hover {
+    background: var(--accent-success);
+    color: white;
+}
+
+.empty {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.historyPreview {
+    border-top: 1px solid var(--glass-border);
+    padding-top: 12px;
+}
+
+.label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.miniList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.miniRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Inline Forms */
+.inlineForm {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 8px;
+    animation: fadeIn 0.2s;
+}
+
+.input {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 80px;
+}
+
+.confirmBtn {
+    background: var(--accent-poker);
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.cancelBtn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.cashOutForm {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.miniInput {
+    width: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.miniBtn {
+    background: var(--accent-success);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.miniCancel {
+    background: transparent;
+    color: var(--text-muted);
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

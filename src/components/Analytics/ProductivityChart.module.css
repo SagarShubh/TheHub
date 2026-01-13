@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: var(--space-4);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title {
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.scoreBig {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    font-family: var(--font-body);
+    font-variant-numeric: tabular-nums;
+    background: linear-gradient(135deg, #ffffff, #a3a3a3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.percent {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    -webkit-text-fill-color: var(--text-muted);
+}
+
+.chart {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: var(--space-4);
+    gap: var(--space-2);
+}
+
+.barGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.barTrack {
+    width: 100%;
+    max-width: 24px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.barFill {
+    width: 100%;
+    border-radius: 12px;
+    min-height: 4px;
+    /* Ensure visibility for 0 score */
+    transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.8;
+}
+
+.barFill:hover {
+    opacity: 1;
+}
+
+.barLabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
