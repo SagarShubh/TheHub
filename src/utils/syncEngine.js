@@ -1,6 +1,6 @@
 
 import { supabase } from '@/lib/supabaseClient';
-import { loadState, saveState } from './localStorage';
+import { loadData, saveData } from './localStorage';
 
 const TABLE_NAME = 'user_backups';
 
@@ -9,7 +9,7 @@ export const syncEngine = {
     async push() {
         if (!navigator.onLine) return;
 
-        const localData = loadState();
+        const localData = loadData();
         const user = (await supabase.auth.getUser()).data.user;
 
         if (!user) return; // Must be logged in
